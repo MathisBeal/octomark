@@ -7,7 +7,7 @@ export async function get_github_markdown(
   const octokit = new Octokit({ auth: token });
   const response = await octokit.request("POST /markdown", {
     text: mdContent,
-    headers: { "X-GitHub-Api-Version": "2022-11-28" },
+    headers: { "X-GitHub-Api-Version": "2026-03-10" },
     mode: "gfm",
   });
   return response.data;

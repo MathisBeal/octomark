@@ -6,8 +6,11 @@ rm -f test-elements.html
 rm -f README-dark.html
 rm -f README-light.html
 
+# On supprime aussi le cache de CSS pour être sûr que les fichiers CSS mis à jour sont ceux générés à partir du commit actuel
+rm -rf .css-cache
+
 # On applique prettier sur tous les fichiers
-prettier -w .
+npx prettier -w .
 
 # On build et on génère les fichiers HTML à partir du README.md
 npm run build

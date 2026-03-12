@@ -77,6 +77,9 @@ export async function get_css(
   force: boolean = false,
 ): Promise<string> {
   await ensure_cache_dir_exist();
+
+  const targetPath = path.join(CACHE_DIR, `github-${theme}.css`);
+
   let cssPath = await cached_css(theme);
   let isOld = cssPath ? await cached_css_is_old(cssPath) : false;
 
@@ -93,7 +96,8 @@ export async function get_css(
         );
       }
     }
+    cssPath = targetPath;
   }
 
-  return fs.readFile(cssPath!, "utf8");
+  return fs.readFile(cssPath, "utf8");
 }
