@@ -1,6 +1,6 @@
 {
   "name": "octomark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Mathis BEAL <mathis.beal04@gmail.com>",
   "description": "Convert Markdown files to GitHub-styled HTML using the official GitHub API.",
   "keywords": [
