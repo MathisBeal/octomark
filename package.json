@@ -1,0 +1,49 @@
+{
+  "name": "octomark",
+  "version": "0.1.0",
+  "author": "Mathis BEAL <mathis.beal04@gmail.com>",
+  "description": "Convert Markdown files to GitHub-styled HTML using the official GitHub API.",
+  "keywords": [
+    "markdown",
+    "github",
+    "html",
+    "cli",
+    "converter"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MathisBeal/octomark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MathisBeal/octomark/issues"
+  },
+  "homepage": "https://github.com/MathisBeal/octomark#readme",
+  "bin": {
+    "octomark": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "cleanCache": "rm -rf .css-cache",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@octokit/core": "^7.0.6",
+    "fs-extra": "^11.3.4",
+    "generate-github-markdown-css": "^6.6.0",
+    "meow": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^25.4.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
