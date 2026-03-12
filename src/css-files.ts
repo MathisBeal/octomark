@@ -1,7 +1,7 @@
 import fs from "fs-extra";
 import githubMarkdownCss from "generate-github-markdown-css";
 import path from "path";
-import { CACHE_DIR } from "./cli.js";
+import { CACHE_DIR } from "./cache-manager.js";
 
 /**
  * Makes sure the cache directory exists. If it doesn't exist, it will be created.

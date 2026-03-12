@@ -1,6 +1,11 @@
 import fs from "fs-extra";
-import path from "path";
-import { CACHE_DIR } from "./cli.js";
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+export const CACHE_DIR = path.join(__dirname, "../.css-cache"); // Remonte d'un cran si on est dans dist/
 
 export async function clean_cache(): Promise<void> {
   if (await fs.pathExists(CACHE_DIR)) {

@@ -1,18 +1,9 @@
 #!/usr/bin/env node
 import meow from "meow";
-import path from "path";
-import { fileURLToPath } from "url";
 import { generate_html_file } from "./handle-commands.js";
 import { print_themes } from "./list-themes.js";
 
-import { dirname } from "node:path";
 import { clean_cache } from "./cache-manager.js";
-
-// On recrée __dirname manuellement pour les modules ES
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-export const CACHE_DIR = path.join(__dirname, "../.css-cache"); // Remonte d'un cran si on est dans dist/
 
 const cli = meow(
   `

@@ -1,0 +1,19 @@
+# On build et on génère le HTML
+
+# On supprime les fichiers HTML générés précédemment pour ne pas appliquer prettier dessus
+# et être sûr que les fichiers mis à jour sont ceux générés à partir du commit actuel
+rm -f test-elements.html
+rm -f README-dark.html
+rm -f README-light.html
+
+# On applique prettier sur tous les fichiers
+prettier -w .
+
+# On build et on génère les fichiers HTML à partir du README.md
+npm run build
+node dist/cli.js README.md --theme dark -o README-dark.html
+node dist/cli.js README.md --theme light -o README-light.html
+node dist/cli.js test-elements.md
+
+# On force l'ajout des modifications (fichiers modifiés et fichiers générés) pour les committer
+git add .
