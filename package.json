@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/MathisBeal/octomark#readme",
   "bin": {
-    "octomark": "./dist/cli.js"
+    "octomark": "dist/cli.js"
   },
   "files": [
     "dist",
