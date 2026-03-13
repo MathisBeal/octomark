@@ -1516,6 +1516,9 @@
 </head>
 <body class="markdown-body">
     <h1>🚀 Octomark</h1>
+<div align="center">
+	<a target="_blank" rel="noopener noreferrer nofollow" href="https://raw.githubusercontent.com/MathisBeal/octomark/refs/heads/main/assets/octomark-logo.svg"><img src="https://raw.githubusercontent.com/MathisBeal/octomark/refs/heads/main/assets/octomark-logo.svg" alt="Octomark Logo" style="max-width: 100%;"></a>
+</div>
 <p><strong>Transformez vos fichiers Markdown en pages HTML élégantes avec le rendu exact de GitHub.</strong></p>
 <p><code class="notranslate">octomark</code> est un outil en ligne de commande (CLI) qui utilise l'API officielle de GitHub pour convertir vos fichiers <code class="notranslate">.md</code>. Il récupère et met en cache dynamiquement les feuilles de style de GitHub pour garantir que votre rendu est toujours identique à celui que vous voyez sur <code class="notranslate">github.com</code>.</p>
 <hr>
@@ -1530,28 +1533,22 @@
 <hr>
 <h2>🛠️ Installation</h2>
 <p>Vous pouvez installer <code class="notranslate">octomark</code> globalement via npm :</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">npm install -g octomark
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">npm install -g octomark</pre></div>
 <p>Ou l'utiliser directement avec <code class="notranslate">npx</code> :</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">npx octomark README.md
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">npx octomark README.md</pre></div>
 <hr>
 <h2>📖 Utilisation</h2>
 <h3>Conversion simple</h3>
 <p>Génère un fichier <code class="notranslate">README.html</code> avec le thème clair par défaut :</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">octomark README.md
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">octomark README.md</pre></div>
 <h3>Choisir un thème</h3>
-<pre lang="bash" class="notranslate"><code class="notranslate">octomark README.md --theme dark_high_contrast
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">octomark README.md --theme dark_high_contrast</pre></div>
 <h3>Liste des thèmes disponibles</h3>
-<pre lang="bash" class="notranslate"><code class="notranslate">octomark --list
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">octomark --list</pre></div>
 <h3>Gestion du cache</h3>
 <p>Si vous voulez forcer la mise à jour des styles ou vider le cache :</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">octomark README.md --force   # Force le téléchargement du CSS
-octomark --clean             # Supprime tout le cache local
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">octomark README.md --force   <span class="pl-c"><span class="pl-c">#</span> Force le téléchargement du CSS</span>
+octomark --clean             <span class="pl-c"><span class="pl-c">#</span> Supprime tout le cache local</span></pre></div>
 <hr>
 <h2>⚙️ Options du CLI</h2>
 <markdown-accessiblity-table><table role="table">
@@ -1568,7 +1565,7 @@ octomark --clean             # Supprime tout le cache local
 <td><code class="notranslate">--theme</code></td>
 <td><code class="notranslate">-t</code></td>
 <td>Définit le thème GitHub à utiliser.</td>
-<td><code class="notranslate">light</code></td>
+<td><code class="notranslate">dark</code></td>
 </tr>
 <tr>
 <td><code class="notranslate">--list</code></td>
@@ -1580,7 +1577,7 @@ octomark --clean             # Supprime tout le cache local
 <td><code class="notranslate">--out</code></td>
 <td><code class="notranslate">-o</code></td>
 <td>Nom du fichier HTML de sortie.</td>
-<td><code class="notranslate">input.html</code></td>
+<td><code class="notranslate">[input].html</code></td>
 </tr>
 <tr>
 <td><code class="notranslate">--force</code></td>
@@ -1612,11 +1609,11 @@ octomark --clean             # Supprime tout le cache local
 <hr>
 <h2>🔑 Limites de l'API (Rate Limiting)</h2>
 <p>Sans authentification, l'API GitHub limite les requêtes à <strong>60 par heure</strong>. Si vous convertissez de nombreux fichiers, vous pouvez utiliser un <strong>Personal Access Token</strong> :</p>
-<pre lang="bash" class="notranslate"><code class="notranslate">octomark file.md --token YOUR_GITHUB_TOKEN
-</code></pre>
+<div class="highlight highlight-source-shell"><pre class="notranslate">octomark file.md --token YOUR_GITHUB_TOKEN</pre></div>
 <hr>
 <h2>📄 Licence</h2>
-<p>Ce projet est sous licence <strong>MIT</strong>. Réalisé avec ❤️ par MathisBEAL.</p>
+<p>Ce projet est sous licence <strong>MIT</strong>.<br>
+Réalisé avec ❤️ par MathisBEAL.</p>
 <hr>
 </body>
 </html>
